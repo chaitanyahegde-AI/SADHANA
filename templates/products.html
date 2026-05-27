@@ -1,0 +1,285 @@
+﻿<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Products | Sadhana Honey</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-lowest": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary-container": "#5c647a",
+                      "surface-variant": "#d3e4fe",
+                      "surface": "#f8f9ff",
+                      "primary-container": "#4f46e5",
+                      "on-secondary-fixed-variant": "#3f465c",
+                      "inverse-on-surface": "#eaf1ff",
+                      "tertiary-container": "#bc1d25",
+                      "secondary-fixed": "#dae2fd",
+                      "on-primary-fixed": "#0f0069",
+                      "on-primary-container": "#dad7ff",
+                      "on-primary-fixed-variant": "#3323cc",
+                      "surface-tint": "#4d44e3",
+                      "on-tertiary-fixed": "#410004",
+                      "background": "#f8f9ff",
+                      "surface-container-high": "#dce9ff",
+                      "error-container": "#ffdad6",
+                      "tertiary-fixed": "#ffdad7",
+                      "primary": "#3525cd",
+                      "tertiary-fixed-dim": "#ffb3ad",
+                      "surface-bright": "#f8f9ff",
+                      "surface-container-low": "#eff4ff",
+                      "on-tertiary-fixed-variant": "#930013",
+                      "inverse-surface": "#213145",
+                      "on-primary": "#ffffff",
+                      "surface-container": "#e5eeff",
+                      "secondary-container": "#dae2fd",
+                      "error": "#ba1a1a",
+                      "on-error-container": "#93000a",
+                      "surface-dim": "#cbdbf5",
+                      "secondary": "#565e74",
+                      "on-surface": "#0b1c30",
+                      "on-secondary-fixed": "#131b2e",
+                      "on-tertiary-container": "#ffd0cc",
+                      "on-background": "#0b1c30",
+                      "secondary-fixed-dim": "#bec6e0",
+                      "on-surface-variant": "#464555",
+                      "inverse-primary": "#c3c0ff",
+                      "tertiary": "#960014",
+                      "on-error": "#ffffff",
+                      "primary-fixed-dim": "#c3c0ff",
+                      "outline-variant": "#c7c4d8",
+                      "surface-container-highest": "#d3e4fe",
+                      "primary-fixed": "#e2dfff",
+                      "outline": "#777587"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "3xl": "64px",
+                      "base": "4px",
+                      "md": "16px",
+                      "2xl": "48px",
+                      "xs": "4px",
+                      "sm": "8px",
+                      "gutter": "24px",
+                      "container-max": "1280px",
+                      "xl": "32px",
+                      "margin-mobile": "16px",
+                      "lg": "24px"
+              },
+              "fontFamily": {
+                      "label-sm": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "display-lg-mobile": ["Inter"],
+                      "headline-md": ["Inter"],
+                      "body-md": ["Inter"],
+                      "headline-sm": ["Inter"],
+                      "display-lg": ["Inter"],
+                      "label-md": ["Inter"],
+                      "body-sm": ["Inter"]
+              },
+              "fontSize": {
+                      "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "display-lg-mobile": ["28px", {"lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                      "display-lg": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(rgba(11, 28, 48, 0.4), rgba(11, 28, 48, 0.4));
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- Top Navigation Bar -->
+<header class="bg-surface docked full-width top-0 border-b border-outline-variant shadow-sm z-50 sticky">
+<div class="max-w-container-max mx-auto px-gutter flex items-center justify-between h-20">
+<div class="font-display-lg text-display-lg font-bold text-primary">Sadhana Honey</div>
+<nav class="hidden md:flex items-center gap-xl">
+<a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1" href="/">Home</a>
+<a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="/dashboard">Dashboard</a>
+<a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="/admin">Admin</a>
+</nav>
+<div class="flex items-center gap-md">
+<button class="p-base rounded-full hover:bg-surface-container-low transition-all">
+<span class="material-symbols-outlined text-on-surface">search</span>
+</button>
+<button class="p-base rounded-full hover:bg-surface-container-low transition-all relative">
+<span class="material-symbols-outlined text-on-surface">shopping_cart</span>
+</button>
+
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[400px] w-full overflow-hidden mb-3xl">
+<img class="w-full h-full object-cover" data-alt="A macro cinematic shot of premium raw organic honey being drizzled from a wooden dipper into a crystal clear glass jar. The lighting is warm and golden, reminiscent of late afternoon sun, highlighting the viscous texture and amber clarity of the honey. The background features a blurred, minimalist rustic kitchen setting with soft textures and earthy tones, creating a sense of purity and artisanal quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTzrJD11DyLMkzLg9kcXAuB4yLOKoUrGqLknO-aEdlTFhbhHw50Lzx66aGrFZ6i-97PqdKUAJQlM2b3EPjPne6Om4v4k6kJGTQkGNQKgOR7A-dm2c0zdEs3Pa7NdPFIW3BGB2t5Ew_bIRtyEvUdnI22RF-1u8AFoUA361AMEs8BdxIkXPABlD3Trb_ZSG97s1H1Ak91_oBjLQusKf3YKgdcOxrDBqss1TrWnuS9f4gd0zIamU3CBf8d8dec_mbAQbKDuD5xxldgKQ"/>
+<div class="absolute inset-0 hero-gradient flex items-center justify-center">
+<div class="text-center px-gutter">
+<span class="inline-block bg-tertiary text-on-tertiary px-md py-xs rounded-full font-label-sm text-label-sm mb-md uppercase tracking-wider">Natural &amp; Ethical</span>
+<h1 class="text-white font-display-lg text-display-lg-mobile md:text-display-lg mb-md">Our Premium Products 🍯</h1>
+<p class="text-white/90 font-body-lg text-body-lg max-w-2xl mx-auto">Discover the essence of purity with our ethically sourced, raw honey collection from the heart of pristine forests.</p>
+</div>
+</div>
+</section>
+<!-- Product Grid -->
+<section class="max-w-container-max mx-auto px-gutter mb-3xl">
+<div class="flex flex-col md:flex-row justify-between items-end mb-xl gap-md">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">The Hive Collection</h2>
+<p class="font-body-md text-body-md text-secondary">Handpicked selections for your wellness journey</p>
+</div>
+<div class="flex gap-sm">
+<button class="flex items-center gap-xs px-md py-sm border border-outline rounded-lg font-label-md text-label-md hover:bg-surface-container-low transition-all">
+<span class="material-symbols-outlined text-[18px]">filter_list</span> Filter
+                    </button>
+<button class="flex items-center gap-xs px-md py-sm border border-outline rounded-lg font-label-md text-label-md hover:bg-surface-container-low transition-all">
+<span class="material-symbols-outlined text-[18px]">sort</span> Sort
+                    </button>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-lg">
+                {% for p in products %}
+                <div class="group bg-surface-container-lowest rounded-xl border border-outline-variant hover:border-primary/30 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden">
+<div class="relative overflow-hidden aspect-square">
+<img alt="{{ p.name }}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="{{ p.image }}"/>
+<div class="absolute top-md right-md">
+<span class="bg-surface-container-lowest/90 backdrop-blur-md px-sm py-xs rounded-lg font-label-sm text-label-sm text-on-surface shadow-sm">In Stock</span>
+</div>
+</div>
+<div class="p-lg flex flex-col flex-grow">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-xs group-hover:text-primary transition-colors">
+                            {{ p.name }}
+                        </h3>
+<p class="font-body-sm text-body-sm text-secondary line-clamp-2 mb-md flex-grow">
+                            {{ p.desc }}
+                        </p>
+<div class="flex items-center justify-between mb-lg">
+<span class="font-headline-md text-headline-md text-primary">₹{{ p.price }}</span>
+<!-- Quantity Selector -->
+<div class="flex items-center bg-surface-container rounded-lg border border-outline-variant p-xs">
+<button class="w-8 h-8 flex items-center justify-center rounded-md hover:bg-surface-container-high active:scale-90 transition-all" onclick="decreaseQty({{ p.product_id }})">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<span class="w-10 text-center font-label-md text-label-md text-on-surface" id="qty-{{ p.product_id }}">1</span>
+<button class="w-8 h-8 flex items-center justify-center rounded-md hover:bg-surface-container-high active:scale-90 transition-all" onclick="increaseQty({{ p.product_id }})">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col gap-sm">
+<button class="w-full py-md px-md rounded-lg bg-surface border border-primary text-primary font-label-md text-label-md hover:bg-primary-container/10 transition-all flex items-center justify-center gap-xs" onclick="addToCart({{ p.product_id }})">
+<span class="material-symbols-outlined text-[20px]">shopping_cart</span> Add to Cart
+                            </button>
+<a class="w-full py-md px-md rounded-lg bg-primary text-on-primary font-label-md text-label-md text-center hover:shadow-lg hover:shadow-primary/20 active:scale-[0.98] transition-all" href="/order/{{ p.product_id }}">
+                                Buy Now
+                            </a>
+</div>
+</div>
+</div>
+                {% endfor %}
+            </div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant py-xl">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-col md:flex-row justify-between items-start gap-3xl mb-2xl">
+<div class="max-w-sm">
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface mb-md">Sadhana Honey</div>
+<p class="font-body-sm text-body-sm text-secondary mb-lg">Bringing you the finest selection of raw, ethical, and pure honey directly from sustainable hives across the country.</p>
+<div class="flex gap-md">
+<a class="text-secondary hover:text-primary" href="#"><span class="material-symbols-outlined">social_leaderboard</span></a>
+<a class="text-secondary hover:text-primary" href="#"><span class="material-symbols-outlined">camera_alt</span></a>
+<a class="text-secondary hover:text-primary" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-xl w-full md:w-auto">
+<div class="flex flex-col gap-sm">
+<span class="font-label-md text-label-md text-on-surface mb-base">Company</span>
+<a class="font-body-sm text-body-sm text-secondary hover:underline" href="#">About Us</a>
+<a class="font-body-sm text-body-sm text-secondary hover:underline" href="#">Sustainability</a>
+<a class="font-body-sm text-body-sm text-secondary hover:underline" href="#">Our Story</a>
+</div>
+<div class="flex flex-col gap-sm">
+<span class="font-label-md text-label-md text-on-surface mb-base">Support</span>
+<a class="font-body-sm text-body-sm text-secondary hover:underline" href="#">Shipping Policy</a>
+<a class="font-body-sm text-body-sm text-secondary hover:underline" href="#">Contact</a>
+<a class="font-body-sm text-body-sm text-secondary hover:underline" href="#">FAQs</a>
+</div>
+<div class="flex flex-col gap-sm">
+<span class="font-label-md text-label-md text-on-surface mb-base">Legal</span>
+<a class="font-body-sm text-body-sm text-secondary hover:underline" href="#">Terms of Service</a>
+<a class="font-body-sm text-body-sm text-secondary hover:underline" href="#">Privacy Policy</a>
+</div>
+</div>
+</div>
+<div class="pt-xl border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-md">
+<p class="font-label-sm text-label-sm text-secondary">© 2024 Sadhana Honey. Pure, Natural, Ethical.</p>
+<div class="flex gap-md">
+<span class="material-symbols-outlined text-secondary text-[24px]">payments</span>
+<span class="material-symbols-outlined text-secondary text-[24px]">credit_card</span>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        function increaseQty(id){
+            let qty = document.getElementById(`qty-${id}`);
+            qty.innerText = parseInt(qty.innerText) + 1;
+        }
+
+        function decreaseQty(id){
+            let qty = document.getElementById(`qty-${id}`);
+            let current = parseInt(qty.innerText);
+            if(current > 1){
+                qty.innerText = current - 1;
+            }
+        }
+
+        function addToCart(id){
+            let qty = document.getElementById(`qty-${id}`).innerText;
+            window.location.href = `/add_to_cart/${id}/${qty}`;
+        }
+
+        function buyNow(id){
+            let qty = document.getElementById(`qty-${id}`).innerText;
+            window.location.href = `/checkout/${id}/${qty}`;
+        }
+    </script>
+</body></html>

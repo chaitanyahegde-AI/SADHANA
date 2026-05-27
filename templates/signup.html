@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Immersive Glassmorphism Sign Up - Sadhana Honey</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#7c5800",
+                    "on-tertiary-fixed-variant": "#464745",
+                    "surface-dim": "#dcd9d9",
+                    "on-primary-fixed-variant": "#5e4200",
+                    "surface-container-highest": "#e5e2e1",
+                    "tertiary-fixed": "#e3e2e0",
+                    "on-primary-fixed": "#271900",
+                    "on-secondary-container": "#663500",
+                    "on-secondary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "secondary-fixed": "#ffdcc3",
+                    "inverse-on-surface": "#f3f0ef",
+                    "inverse-primary": "#ffba20",
+                    "on-tertiary-container": "#515250",
+                    "inverse-surface": "#313030",
+                    "error-container": "#ffdad6",
+                    "background": "#fcf9f8",
+                    "surface-bright": "#fcf9f8",
+                    "surface-container-high": "#eae7e7",
+                    "primary-fixed-dim": "#ffba20",
+                    "on-surface": "#1c1b1b",
+                    "tertiary-container": "#c5c5c2",
+                    "tertiary": "#5e5f5d",
+                    "on-background": "#1c1b1b",
+                    "primary-fixed": "#ffdea8",
+                    "on-tertiary-fixed": "#1a1c1a",
+                    "on-primary": "#ffffff",
+                    "surface-container-low": "#f6f3f2",
+                    "outline": "#837560",
+                    "outline-variant": "#d5c4ab",
+                    "surface": "#fcf9f8",
+                    "surface-variant": "#e5e2e1",
+                    "secondary-container": "#fe932c",
+                    "on-error-container": "#93000a",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#f0eded",
+                    "on-secondary-fixed": "#2f1500",
+                    "tertiary-fixed-dim": "#c7c6c4",
+                    "secondary-fixed-dim": "#ffb77d",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#514532",
+                    "on-secondary-fixed-variant": "#6e3900",
+                    "on-primary-container": "#6b4c00",
+                    "secondary": "#904d00",
+                    "error": "#ba1a1a",
+                    "primary-container": "#ffb800",
+                    "surface-tint": "#7c5800"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.5rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "sm": "12px",
+                    "base": "8px",
+                    "gutter": "24px",
+                    "margin-mobile": "20px",
+                    "container-max": "1280px",
+                    "md": "24px",
+                    "xl": "80px",
+                    "lg": "48px",
+                    "xs": "4px"
+            },
+            "fontFamily": {
+                    "body-md": ["Plus Jakarta Sans"],
+                    "display-lg": ["Playfair Display"],
+                    "label-sm": ["Plus Jakarta Sans"],
+                    "headline-md": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"],
+                    "headline-sm": ["Playfair Display"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "label-md": ["Plus Jakarta Sans"],
+                    "headline-lg-mobile": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "700"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .bg-hero {
+            background-image: url('https://lh3.googleusercontent.com/aida/ADBb0uj7MMiZICv-IU_xKeXd4mKhfEtai65r8BcBujqgADQQ5Qn5JCuvt7-zDhC9NS46qVMccu00SFIulcuVXxjmfoucqR8QWpyP6x-86gWfsWcT7YazNVSHJvBYF_6883b7WHq7MWfue-f0NblWUP-DJeu42TtR-63A6Z-J3RWO5MAIFss3BUfxxvDudEfpSZhwyW6KBMZkG2oRjroa2Gw_RXOBwKrJ8UHnLQkHIA1bAfGhjVMWCVqkl4MMxTQ');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .input-underlined {
+            border: none;
+            border-bottom: 1.5px solid rgba(131, 117, 96, 0.3);
+            background: transparent;
+            transition: all 0.3s ease;
+        }
+        .input-underlined:focus {
+            outline: none;
+            border-bottom-color: #ffb800;
+            box-shadow: none;
+            background: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-hero min-h-screen font-body-md text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation -->
+<nav class="fixed top-0 left-0 w-full z-50 px-gutter py-sm flex justify-between items-center transition-all">
+<a class="flex items-center gap-base active:scale-95 transition-all p-2 rounded-lg bg-white/20 backdrop-blur-md" href="/">
+<img alt="Sadhana Honey Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida/ADBb0uiHyoPk8Pqn8wC0zu2Yay9AKJH2eKOSbQjpGMdAtu4rFjol1bp5fNS84We5owVD56Onv0P2jgqpFP5jZzg7j_-OXvpAwpgjKexJrnBmBrvWqwyUfjKa8rWqOnL7ZOS7Dfht3F1i11txu1TVrU9SYvfD_o2QDVHfs0xFGDa24BeDT5Nh5ta40p3iWLqOEOABzQxSJ5QM-Ox96pahrw4aNoCuR1AU4kU29g9t3QTxBdrIOeHyPEkELhwLKG8"/>
+</a>
+<div class="flex items-center gap-gutter">
+<a class="text-label-md text-white drop-shadow-md hover:text-primary-fixed transition-colors flex items-center gap-xs font-semibold" href="/">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+            Back to home
+        </a>
+<a class="px-gutter py-base rounded-full bg-white/30 backdrop-blur-md text-white font-bold text-label-md border border-white/20 hover:bg-white/40 active:opacity-80 transition-all" href="/login">
+            Login
+        </a>
+</div>
+</nav>
+<!-- Main Immersive Canvas -->
+<main class="min-h-screen w-full flex items-center justify-center p-margin-mobile md:p-gutter pt-xl overflow-y-auto">
+<div class="max-w-[500px] w-full glass-card rounded-xl shadow-2xl p-lg md:p-xl my-xl animate-in fade-in zoom-in duration-700">
+<!-- Brand Header within Card -->
+<div class="flex flex-col items-center mb-lg">
+<img alt="Sadhana Honey Logo" class="h-16 w-auto mb-md drop-shadow-sm" src="https://lh3.googleusercontent.com/aida/ADBb0uiHyoPk8Pqn8wC0zu2Yay9AKJH2eKOSbQjpGMdAtu4rFjol1bp5fNS84We5owVD56Onv0P2jgqpFP5jZzg7j_-OXvpAwpgjKexJrnBmBrvWqwyUfjKa8rWqOnL7ZOS7Dfht3F1i11txu1TVrU9SYvfD_o2QDVHfs0xFGDa24BeDT5Nh5ta40p3iWLqOEOABzQxSJ5QM-Ox96pahrw4aNoCuR1AU4kU29g9t3QTxBdrIOeHyPEkELhwLKG8"/>
+<header class="text-center">
+<h1 class="font-headline-md md:text-headline-lg text-primary mb-xs">Create Account</h1>
+<p class="text-body-md text-on-surface-variant font-medium">Embark on a journey of liquid gold.</p>
+</header>
+</div>
+<form class="space-y-gutter"
+      id="signupForm"
+      method="POST"
+      action="/signup">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- First Name -->
+<div class="flex flex-col gap-xs">
+<label class="font-label-md text-on-surface-variant uppercase tracking-wider text-[11px]" for="first_name">First Name</label>
+<input class="input-underlined py-sm px-2 text-body-md placeholder:text-outline-variant/60 focus:placeholder:opacity-0" id="first_name" name="first_name" placeholder="E.g. Julian" required="" type="text"/>
+</div>
+<!-- Last Name -->
+<div class="flex flex-col gap-xs">
+<label class="font-label-md text-on-surface-variant uppercase tracking-wider text-[11px]" for="last_name">Last Name</label>
+<input class="input-underlined py-sm px-2 text-body-md placeholder:text-outline-variant/60 focus:placeholder:opacity-0" id="last_name" name="last_name" placeholder="E.g. Thorne" required="" type="text"/>
+</div>
+</div>
+<!-- Email -->
+<div class="flex flex-col gap-xs">
+<label class="font-label-md text-on-surface-variant uppercase tracking-wider text-[11px]" for="email">Email Address</label>
+<input class="input-underlined py-sm px-2 text-body-md placeholder:text-outline-variant/60 focus:placeholder:opacity-0" id="email" name="email" placeholder="julian@heritage.com" required="" type="email"/>
+</div>
+<!-- Username -->
+<div class="flex flex-col gap-xs">
+<label class="font-label-md text-on-surface-variant uppercase tracking-wider text-[11px]" for="username">Username</label>
+<input class="input-underlined py-sm px-2 text-body-md placeholder:text-outline-variant/60 focus:placeholder:opacity-0" id="username" name="username" placeholder="honey_connoisseur" required="" type="text"/>
+</div>
+<!-- Password -->
+<div class="flex flex-col gap-xs group">
+<label class="font-label-md text-on-surface-variant uppercase tracking-wider text-[11px]" for="password">Password</label>
+<div class="relative">
+<input class="w-full input-underlined py-sm px-2 pr-10 text-body-md placeholder:text-outline-variant/60 focus:placeholder:opacity-0" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+<button class="absolute right-2 top-1/2 -translate-y-1/2 text-outline-variant hover:text-primary" onclick="togglePassword()" type="button">
+<span class="material-symbols-outlined text-[20px]" id="password_icon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Action -->
+<div class="pt-md">
+<button class="w-full bg-[#ffb800] text-on-primary-container font-headline-sm py-md rounded-full shadow-lg hover:shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all duration-300" type="submit">
+                    Create Account
+                </button>
+</div>
+</form>
+<footer class="mt-xl text-center">
+<p class="text-body-md text-on-surface-variant">
+                Already have an account? 
+                <a class="text-primary font-semibold hover:underline decoration-primary/30 decoration-2 underline-offset-4 ml-1" href="/login">Login</a>
+</p>
+</footer>
+</div>
+</main>
+<!-- Minimal Footer -->
+<footer class="w-full bg-white/10 backdrop-blur-md py-md px-gutter border-t border-white/10">
+<div class="flex flex-col md:flex-row justify-between items-center gap-base max-w-container-max mx-auto">
+<div class="flex flex-col items-center md:items-start">
+<span class="font-headline-sm text-white drop-shadow-md tracking-tight">Sadhana Honey</span>
+<p class="font-body-md text-[12px] text-white/80 mt-xs">© 2024 Liquid Gold Honey. Artisanal &amp; Pure.</p>
+</div>
+<div class="flex gap-gutter mt-4 md:mt-0">
+<a class="font-body-md text-[12px] text-white/80 hover:text-white transition-all uppercase tracking-widest font-semibold" href="#">Home</a>
+<a class="font-body-md text-[12px] text-white/80 hover:text-white transition-all uppercase tracking-widest font-semibold" href="#">Our Story</a>
+<a class="font-body-md text-[12px] text-white/80 hover:text-white transition-all uppercase tracking-widest font-semibold" href="#">Privacy</a>
+<a class="font-body-md text-[12px] text-white/80 hover:text-white transition-all uppercase tracking-widest font-semibold" href="#">Terms</a>
+</div>
+</div>
+</footer>
+<script>
+    function togglePassword() {
+        const pwdInput = document.getElementById('password');
+        const icon = document.getElementById('password_icon');
+        if (pwdInput.type === 'password') {
+            pwdInput.type = 'text';
+            icon.innerText = 'visibility_off';
+        } else {
+            pwdInput.type = 'password';
+            icon.innerText = 'visibility';
+        }
+    }
+
+    // Atmospheric focus effects for glass theme
+    const inputs = document.querySelectorAll('.input-underlined');
+    inputs.forEach(input => {
+        input.addEventListener('focus', () => {
+            input.parentElement.querySelector('label').classList.replace('text-on-surface-variant', 'text-primary');
+        });
+        input.addEventListener('blur', () => {
+            if (!input.value) {
+                input.parentElement.querySelector('label').classList.replace('text-primary', 'text-on-surface-variant');
+            }
+        });
+    });
+
+    // Form submission interaction
+ 
+</script>
+</body></html>

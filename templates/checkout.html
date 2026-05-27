@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Checkout | Sadhana Honey</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&amp;family=Manrope:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed": "#2b1700",
+                    "inverse-surface": "#372f28",
+                    "on-error-container": "#93000a",
+                    "on-secondary-container": "#4e6955",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed-variant": "#324d3a",
+                    "primary-fixed": "#ffddba",
+                    "on-primary-container": "#4b2c00",
+                    "on-tertiary-container": "#35332a",
+                    "surface": "#fff8f4",
+                    "secondary-container": "#c9e7ce",
+                    "outline-variant": "#d7c3b0",
+                    "surface-dim": "#e5d8cc",
+                    "on-error": "#ffffff",
+                    "forest-shadow": "#1A2B1F",
+                    "background": "#fff8f4",
+                    "surface-container-highest": "#eee0d5",
+                    "surface-variant": "#eee0d5",
+                    "on-background": "#211a14",
+                    "secondary-fixed": "#cbead1",
+                    "cream-base": "#FFFCF5",
+                    "surface-container-high": "#f4e6da",
+                    "on-tertiary": "#ffffff",
+                    "primary": "#875300",
+                    "on-secondary-fixed": "#062011",
+                    "on-tertiary-fixed": "#1d1c13",
+                    "deep-amber": "#915005",
+                    "on-secondary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "primary-fixed-dim": "#ffb965",
+                    "tertiary-fixed": "#e8e2d4",
+                    "secondary-fixed-dim": "#b0ceb5",
+                    "on-surface-variant": "#524436",
+                    "on-tertiary-fixed-variant": "#49473d",
+                    "outline": "#857464",
+                    "surface-tint": "#875300",
+                    "surface-container-low": "#fff1e6",
+                    "inverse-on-surface": "#fceee3",
+                    "honey-glow": "#FFC107",
+                    "surface-bright": "#fff8f4",
+                    "on-surface": "#211a14",
+                    "tertiary-container": "#a09b8f",
+                    "tertiary": "#615e54",
+                    "error": "#ba1a1a",
+                    "inverse-primary": "#ffb965",
+                    "surface-container": "#faebe0",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed-dim": "#cbc6b9",
+                    "primary-container": "#d48c2c",
+                    "secondary": "#496550",
+                    "on-primary-fixed-variant": "#663d00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "container-max-width": "1200px",
+                    "margin-mobile": "20px",
+                    "unit": "8px",
+                    "section-padding": "80px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["EB Garamond"],
+                    "label-md": ["Manrope"],
+                    "display-lg": ["EB Garamond"],
+                    "headline-md": ["EB Garamond"],
+                    "body-lg": ["Manrope"],
+                    "sanskrit-text": ["EB Garamond"],
+                    "body-md": ["Manrope"],
+                    "headline-lg-mobile": ["EB Garamond"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "sanskrit-text": ["20px", {"lineHeight": "1.8", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "500"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.step-inactive {
+    opacity: 0.5;
+    filter: grayscale(1);
+    pointer-events: none
+    }
+.step-active {
+    opacity: 1;
+    filter: none
+    }
+input:focus {
+    border-color: #875300 !important;
+    outline: none !important;
+    box-shadow: 0 1px 0 0 #875300 !important
+    }
+.organic-texture {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCYQlfH3BKab-k4oLGRfXye4-An0MoJBcVXh2AWPcqgIo65iSMNLGRWrDIidHCgrU62SfmVYmPP8b8n72eIVhiLHZ4aEQejUW0fE1JHJXz7GBL7tXQl6ty0bmzK2otSLhxeQjY8FDMOef1Qu-UiRfnpwxF0rkmive-Hb5g-LrKHus_QAfF0O1rPzpJ_Ai5ON9iwVqgujujL4BkDdoKbFhz5RuF-WsCpN6KfSyvKzeshyvY6pbxZJVzsVK5me0QjgHysJrFCXjILxu4)
+    }</style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="bg-surface border-b border-secondary/15 fixed top-0 w-full z-50">
+<nav class="flex justify-between items-center w-full px-gutter max-w-container-max-width mx-auto h-20">
+<div class="flex items-center gap-8">
+<a class="font-headline-lg text-headline-lg text-primary tracking-tight" href="#">Sadhana Honey</a>
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-on-surface-variant font-label-md hover:text-deep-amber transition-colors duration-300" href="#">Shop</a>
+<a class="text-on-surface-variant font-label-md hover:text-deep-amber transition-colors duration-300" href="#">Our Story</a>
+<a class="text-on-surface-variant font-label-md hover:text-deep-amber transition-colors duration-300" href="#">Quality</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="scale-95 active:scale-90 transition-transform p-2">
+<span class="material-symbols-outlined text-primary">shopping_bag</span>
+</button>
+<button class="scale-95 active:scale-90 transition-transform p-2">
+<span class="material-symbols-outlined text-primary">account_circle</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="pt-32 pb-section-padding px-gutter max-w-container-max-width mx-auto min-h-screen">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Left: Checkout Form -->
+<div class="lg:col-span-7 space-y-12">
+<header>
+<h1 class="font-display-lg text-display-lg text-on-surface mb-2">Checkout</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Complete your ritual of nourishment.</p>
+</header>
+<!-- Step 1: Customer Info -->
+<section class="bg-cream-base p-8 border border-secondary/10 shadow-sm transition-all duration-500" id="step-1">
+<div class="flex items-center gap-4 mb-8">
+<span class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">1</span>
+<h2 class="font-headline-md text-headline-md">Shipping Details</h2>
+</div>
+<form
+    action="/place_order"
+    method="POST"
+    class="grid grid-cols-1 md:grid-cols-2 gap-6"
+    id="shipping-form"><div class="md:col-span-2 space-y-1">
+<!-- Full Name -->
+<input
+    class="w-full bg-surface-container-low border-b border-outline-variant px-4 py-3 font-body-md transition-all focus:bg-surface"
+    type="text"
+    name="fullname"
+    placeholder="Aravind Sharma"
+    required>
+
+<!-- Phone -->
+<!-- Phone -->
+<input
+    class="w-full bg-surface-container-low border-b border-outline-variant px-4 py-3 font-body-md transition-all focus:bg-surface"
+    id="phone"
+    name="phone"
+    type="tel"
+    placeholder="+91 98765 43210"
+    required>
+
+<p
+    class="hidden text-error text-[12px] mt-1"
+    id="phone-error">
+
+    Please enter a valid phone number
+
+</p>
+
+<!-- Email -->
+<input
+    class="w-full bg-surface-container-low border-b border-outline-variant px-4 py-3 font-body-md transition-all focus:bg-surface"
+    type="email"
+    name="email"
+    placeholder="aravind@example.com"
+    required>
+
+<!-- Address -->
+<input
+    class="w-full bg-surface-container-low border-b border-outline-variant px-4 py-3 font-body-md transition-all focus:bg-surface"
+    type="text"
+    name="address"
+    placeholder="Street name, Apartment, Suite"
+    required>
+
+<!-- City -->
+<input
+    class="w-full bg-surface-container-low border-b border-outline-variant px-4 py-3 font-body-md transition-all focus:bg-surface"
+    type="text"
+    name="city"
+    placeholder="Rishikesh"
+    required>
+
+<!-- Postal Code -->
+<input
+    class="w-full bg-surface-container-low border-b border-outline-variant px-4 py-3 font-body-md transition-all focus:bg-surface"
+    type="text"
+    name="postal_code"
+    placeholder="249201"
+    required>
+<button class="w-full md:w-auto px-10 py-4 bg-primary text-tertiary-fixed font-label-md hover:bg-deep-amber transition-all duration-300 shadow-lg shadow-primary/10" onclick="goToStep2()" type="button">
+                                Continue to Payment
+                            </button>
+</div>
+</form>
+</section>
+<!-- Step 2: Payment Method -->
+<section class="step-inactive bg-cream-base p-8 border border-secondary/10 shadow-sm transition-all duration-500" id="step-2">
+<div class="flex items-center gap-4 mb-8">
+<span class="w-10 h-10 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center font-bold" id="step-2-indicator">2</span>
+<h2 class="font-headline-md text-headline-md">Payment Method</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+<!-- Card Option -->
+<label class="relative cursor-pointer group">
+<input checked="" class="peer absolute opacity-0" name="payment" type="radio" value="card"/>
+<div class="p-6 border border-outline-variant transition-all peer-checked:border-primary peer-checked:bg-primary/5 hover:border-primary/50">
+<span class="material-symbols-outlined text-primary mb-3">credit_card</span>
+<h3 class="font-label-md text-on-surface">Credit / Debit Card</h3>
+<p class="text-[12px] text-on-surface-variant">Secure checkout via Stripe</p>
+</div>
+<div class="absolute top-4 right-4 opacity-0 peer-checked:opacity-100">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+</div>
+</label>
+<!-- UPI Option -->
+<label class="relative cursor-pointer group">
+<input class="peer absolute opacity-0" name="payment" type="radio" value="upi"/>
+<div class="p-6 border border-outline-variant transition-all peer-checked:border-primary peer-checked:bg-primary/5 hover:border-primary/50">
+<span class="material-symbols-outlined text-primary mb-3">account_balance_wallet</span>
+<h3 class="font-label-md text-on-surface">UPI / Net Banking</h3>
+<p class="text-[12px] text-on-surface-variant">Fast &amp; direct bank transfer</p>
+</div>
+<div class="absolute top-4 right-4 opacity-0 peer-checked:opacity-100">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+</div>
+</label>
+</div>
+<div class="space-y-6">
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface-variant">Card Number</label>
+<div class="relative">
+<input class="w-full bg-surface-container-low border-b border-outline-variant px-4 py-3 font-body-md transition-all focus:bg-surface" placeholder="0000 0000 0000 0000" type="text"/>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 flex gap-2">
+<span class="material-symbols-outlined text-outline text-lg">credit_card</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface-variant">Expiry Date</label>
+<input class="w-full bg-surface-container-low border-b border-outline-variant px-4 py-3 font-body-md transition-all focus:bg-surface" placeholder="MM / YY" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface-variant">CVV</label>
+<input class="w-full bg-surface-container-low border-b border-outline-variant px-4 py-3 font-body-md transition-all focus:bg-surface" placeholder="***" type="password"/>
+</div>
+</div>
+</div>
+<div class="mt-12 flex flex-col gap-4">
+<button
+    type="button"
+    id="rzp-button"
+
+    class="w-full py-5 bg-primary text-tertiary-fixed font-headline-md hover:bg-deep-amber transition-all duration-300 shadow-xl shadow-primary/20">
+
+    Pay with Razorpay
+
+</button>
+<p class="text-center text-[12px] text-on-surface-variant">
+                            By placing an order, you agree to Sadhana's <a class="underline" href="#">Terms of Ritual</a>.
+                        </p>
+</div>
+</section>
+</div>
+<!-- Right: Order Summary -->
+
+<aside class="lg:col-span-5 sticky top-32">
+
+    <div class="bg-surface-container-low p-8 border border-secondary/10 rounded-2xl shadow-lg">
+
+        <h2 class="font-headline-md text-headline-md mb-8 pb-4 border-b border-secondary/10">
+
+            Order Summary
+
+        </h2>
+
+        <div class="space-y-8">
+
+            {% for p in products %}
+
+            <div class="flex gap-5 items-start">
+
+                <!-- IMAGE -->
+
+                <img
+                    src="{{ p.image }}"
+
+                    class="w-24 h-24 rounded-xl object-cover shadow-md">
+
+                <!-- DETAILS -->
+
+                <div class="flex-1">
+
+                    <div class="flex justify-between items-start gap-4">
+
+                        <div>
+
+                            <h3 class="font-headline-md text-on-surface">
+
+                                {{ p.product_name }}
+
+                            </h3>
+
+                            <p class="text-on-surface-variant mt-1">
+
+                                Quantity:
+                                {{ p.qty }}
+
+                            </p>
+
+                        </div>
+
+                        <span class="font-semibold text-primary text-lg whitespace-nowrap">
+
+                            ₹{{ p.subtotal }}
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+        <!-- TOTALS -->
+
+        <div class="pt-8 mt-8 border-t border-secondary/10 space-y-5">
+
+            <div class="flex justify-between text-on-surface-variant">
+
+                <span>
+
+                    Subtotal
+
+                </span>
+
+                <span>
+
+                    ₹{{ total }}
+
+                </span>
+
+            </div>
+
+            <div class="flex justify-between text-on-surface-variant">
+
+                <span>
+
+                    Shipping
+
+                </span>
+
+                <span>
+
+                    ₹{{ shipping }}
+
+                </span>
+
+            </div>
+
+            <div class="flex justify-between text-on-surface-variant">
+
+                <span>
+
+                    Taxes
+
+                </span>
+
+                <span>
+
+                    ₹{{ tax }}
+
+                </span>
+
+            </div>
+
+            <div class="border-t border-dashed pt-6 flex justify-between text-3xl font-bold">
+
+                <span>
+
+                    Total
+
+                </span>
+
+                <span class="text-primary">
+
+                    ₹{{ grand_total }}
+
+                </span>
+
+            </div>
+
+        </div>
+
+        <!-- TRUST -->
+
+        <div class="mt-10 grid grid-cols-2 gap-4 text-sm text-on-surface-variant">
+
+            <div class="flex items-center gap-2">
+
+                <span class="material-symbols-outlined text-primary">
+
+                    eco
+
+                </span>
+
+                100% Organic
+
+            </div>
+
+            <div class="flex items-center gap-2">
+
+                <span class="material-symbols-outlined text-primary">
+
+                    verified
+
+                </span>
+
+                Lab Tested
+
+            </div>
+
+        </div>
+
+    </div>
+
+</aside>
+
+<!-- Trust Badges -->
+<div class="mt-12 grid grid-cols-2 gap-4">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[20px]">eco</span>
+<span class="text-[11px] font-label-md uppercase tracking-widest">100% Organic</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[20px]">verified</span>
+<span class="text-[11px] font-label-md uppercase tracking-widest">Lab Tested</span>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low border-t border-secondary/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-gutter py-section-padding max-w-container-max-width mx-auto">
+<div class="md:col-span-1 space-y-4">
+<h2 class="font-headline-md text-headline-md text-primary">Sadhana Honey</h2>
+<p class="text-on-surface-variant text-body-md pr-4">Crafting devotion in every drop. Pure, wild-harvested honey from the heart of the Himalayas.</p>
+</div>
+<div class="space-y-4">
+<h3 class="font-label-md text-secondary uppercase tracking-widest">Experience</h3>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant/80 hover:text-primary transition-opacity duration-200" href="#">Our Story</a></li>
+<li><a class="text-on-surface-variant/80 hover:text-primary transition-opacity duration-200" href="#">Harvest Process</a></li>
+<li><a class="text-on-surface-variant/80 hover:text-primary transition-opacity duration-200" href="#">Wholesale</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h3 class="font-label-md text-secondary uppercase tracking-widest">Support</h3>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant/80 hover:text-primary transition-opacity duration-200" href="#">Shipping &amp; Returns</a></li>
+<li><a class="text-on-surface-variant/80 hover:text-primary transition-opacity duration-200" href="#">Contact Us</a></li>
+<li><a class="text-on-surface-variant/80 hover:text-primary transition-opacity duration-200" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h3 class="font-label-md text-secondary uppercase tracking-widest">Connection</h3>
+<p class="text-on-surface-variant text-body-md italic">Join our circle of purity.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary opacity-60 hover:opacity-100 cursor-pointer transition-all">public</span>
+<span class="material-symbols-outlined text-secondary opacity-60 hover:opacity-100 cursor-pointer transition-all">local_library</span>
+</div>
+</div>
+</div>
+<div class="max-w-container-max-width mx-auto px-gutter py-8 border-t border-secondary/5 text-center">
+<p class="text-on-surface-variant/60 font-label-md text-[12px]">© 2024 Sadhana Honey. Crafted with Devotion.</p>
+</div>
+</footer>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<script>
+
+function goToStep2() {
+
+    const phoneInput =
+        document.getElementById('phone');
+
+    const phoneError =
+        document.getElementById('phone-error');
+
+    const step1 =
+        document.getElementById('step-1');
+
+    const step2 =
+        document.getElementById('step-2');
+
+    const step2Indicator =
+        document.getElementById(
+            'step-2-indicator'
+        );
+
+    // PHONE VALIDATION
+    if(phoneInput.value.length < 10){
+
+        phoneError.classList.remove(
+            'hidden'
+        );
+
+        return;
+    }
+
+    phoneError.classList.add(
+        'hidden'
+    );
+
+    // SAVE SHIPPING DETAILS TO BACKEND
+    fetch("/place_order", {
+
+        method: "POST",
+
+        body: new FormData(
+            document.getElementById(
+                "shipping-form"
+            )
+        )
+
+    })
+
+    .then(response => {
+
+        // STEP UI ANIMATION
+
+        step1.classList.add(
+            'opacity-40',
+            'scale-[0.98]'
+        );
+
+        step2.classList.remove(
+            'step-inactive'
+        );
+
+        step2.classList.add(
+            'step-active'
+        );
+
+        step2Indicator.classList.remove(
+            'bg-surface-container-highest',
+            'text-on-surface-variant'
+        );
+
+        step2Indicator.classList.add(
+            'bg-primary',
+            'text-on-primary'
+        );
+
+        step2.scrollIntoView({
+
+            behavior: 'smooth',
+
+            block: 'center'
+
+        });
+
+    })
+
+    .catch(error => {
+
+        alert(
+            "Failed to save shipping details"
+        );
+
+        console.log(error);
+
+    });
+
+}
+
+document.getElementById(
+    "rzp-button"
+).onclick = function(e){
+
+    e.preventDefault();
+
+    var options = {
+
+        "key":
+            "{{ razorpay_key }}",
+
+        "amount":
+            "{{ razorpay_order['amount'] }}",
+
+        "currency":
+            "INR",
+
+        "name":
+            "Sadhana Honey",
+
+        "description":
+            "Pure Natural Honey",
+
+        "order_id":
+            "{{ razorpay_order['id'] }}",
+
+        "handler": function(response){
+
+            window.location.href =
+                "/payment_success";
+        },
+
+        "prefill": {
+
+            "name":
+                "{{ session.get('user_fullname') }}",
+
+            "email":
+                "{{ session.get('user') }}"
+        },
+
+        "theme": {
+            "color": "#875300"
+        }
+    };
+
+    var rzp1 =
+        new Razorpay(options);
+
+    rzp1.open();
+};
+
+</script>
+
+<script>
+
+document.getElementById(
+    "rzp-button"
+).onclick = function(e){
+
+    e.preventDefault();
+
+    var options = {
+
+        "key":
+            "{{ razorpay_key }}",
+
+        "amount":
+            "{{ razorpay_order['amount'] }}",
+
+        "currency":
+            "INR",
+
+        "name":
+            "Sadhana Honey",
+
+        "description":
+            "Pure Natural Honey",
+
+        "order_id":
+            "{{ razorpay_order['id'] }}",
+
+        "handler": function (response){
+
+            window.location.href =
+                "/payment_success";
+
+        },
+
+        "prefill": {
+
+            "name":
+                "{{ session.get('user_fullname') }}",
+
+            "email":
+                "{{ session.get('user') }}"
+        },
+
+        "theme": {
+            "color": "#875300"
+        }
+    };
+
+    var rzp1 =
+        new Razorpay(options);
+
+    rzp1.open();
+
+};
+</script>
+
+</script>
+</body></html>

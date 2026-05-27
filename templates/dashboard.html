@@ -1,0 +1,361 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Dashboard - Sadhana Honey</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "honey-gold": "#D4AF37",
+                        "honey-gold-deep": "#B8860B",
+                        "warm-cream": "#FFFDF5",
+                        "deep-charcoal": "#2D2D2D",
+                        "outline-variant": "#c7c4d8",
+                        "on-surface": "#0b1c30",
+                        "surface-bright": "#f8f9ff",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#dce9ff",
+                        "surface-tint": "#4d44e3",
+                        "secondary-container": "#dae2fd",
+                        "primary": "#3525cd",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#d3e4fe",
+                        "surface-container-highest": "#d3e4fe",
+                        "tertiary-fixed-dim": "#ffb3ad",
+                        "tertiary-container": "#bc1d25",
+                        "surface": "#f8f9ff",
+                        "on-tertiary-fixed-variant": "#930013",
+                        "on-tertiary-container": "#ffd0cc",
+                        "primary-fixed": "#e2dfff",
+                        "on-primary-fixed": "#0f0069",
+                        "on-primary-fixed-variant": "#3323cc",
+                        "surface-container-low": "#eff4ff",
+                        "on-tertiary-fixed": "#410004",
+                        "inverse-surface": "#213145",
+                        "error-container": "#ffdad6",
+                        "inverse-on-surface": "#eaf1ff",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#f8f9ff",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#3f465c",
+                        "surface-container": "#e5eeff",
+                        "on-secondary-fixed": "#131b2e",
+                        "primary-container": "#4f46e5",
+                        "tertiary-fixed": "#ffdad7",
+                        "secondary-fixed": "#dae2fd",
+                        "outline": "#777587",
+                        "on-surface-variant": "#464555",
+                        "inverse-primary": "#c3c0ff",
+                        "secondary-fixed-dim": "#bec6e0",
+                        "on-primary-container": "#dad7ff",
+                        "on-error": "#ffffff",
+                        "on-background": "#0b1c30",
+                        "on-secondary-container": "#5c647a",
+                        "secondary": "#565e74",
+                        "tertiary": "#960014",
+                        "surface-dim": "#cbdbf5",
+                        "error": "#ba1a1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "16px",
+                        "lg": "24px",
+                        "3xl": "64px",
+                        "xs": "4px",
+                        "2xl": "48px",
+                        "container-max": "1280px",
+                        "base": "4px",
+                        "xl": "32px",
+                        "sm": "8px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "sans": ["Inter", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"],
+                        "headline-md": ["Playfair Display", "serif"],
+                        "body-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "label-md": ["Inter"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "body-lg": ["Inter"],
+                        "headline-sm": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display-lg-mobile": ["28px", {"lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "display-lg": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>body {
+    font-family: "Inter", sans-serif;
+    background-color: #f8f9ff;
+    color: #0b1c30
+    }
+.quote-bg {
+    background: linear-gradient(135deg, #eff4ff 0%, #e5eeff 100%)
+    }
+.craft-pattern {
+    background-image: radial-gradient(#D4AF37 0.5px, transparent 0.5px);
+    background-size: 24px 24px
+    }
+.serif-title {
+    font-family: "Playfair Display", serif
+    }
+.fill-1 {
+    font-variation-settings: "FILL" 1
+    }
+/* Premium Textures */
+.premium-card {
+    background-color: #FFFDF5;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCGGHFd1ccR1k7yGc_RIrtEI3Ro2MYD_Qr-atGW1jnJ_5hBnceZIZ88ChMFpxNqfjlYIz1NEu19vhrej8JtQUcRyfMHr1GnfYQqN2QIQKCIBezFMlRV4dAuWW2J0JdeOte4Dspv3I5ppQOlmrq6gVRN_pT0wBfBW2CxbWGdnpyvt0_Rdeq4k52LEIpa2vOsA8PsPyhmmlaQIZMj396EeasfyZ07UgCC2VNQTY7KZl6eiSWP1IyzcYcyW3Nbt5IBfdcMTOTjYXcaex0)
+    }
+.gold-border {
+    border: 1px solid rgba(212, 175, 55, 0.3)
+    }
+.gold-border-focus:focus-within {
+    border-color: #D4AF37;
+    box-shadow: 0 0 0 1px #D4AF37
+    }</style>
+</head>
+<body class="bg-background text-on-background min-h-screen">
+<!-- NAVBAR -->
+<nav class="bg-surface border-b border-outline-variant sticky top-0 z-50">
+<div class="max-w-container-max mx-auto px-gutter h-16 flex items-center justify-between">
+<div class="font-bold flex items-center gap-2 serif-title tracking-widest text-honey-gold-deep tracking-[0.2em] text-lg" style="opacity: 0;">SADHANA HONEY</div>
+<div class="hidden md:flex items-center gap-xl">
+<a class="text-label-md text-on-surface-variant hover:text-primary transition-colors" href="/">Home</a>
+<a class="text-label-md text-on-surface-variant hover:text-primary transition-colors" href="/products">Products</a>
+<a class="text-label-md text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1" href="/cart">
+<span class="material-symbols-outlined text-[20px]">shopping_cart</span>
+                    Cart
+                </a>
+<a class="text-label-md text-on-surface-variant hover:text-primary transition-colors" href="/logout">Logout</a>
+</div>
+<button class="md:hidden p-2 text-on-surface-variant">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- HERO -->
+<section class="bg-primary text-on-primary py-2xl">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="max-w-3xl">
+<h1 class="text-display-lg-mobile md:text-display-lg mb-sm serif-title">
+                    Welcome, {{ customer.name }}
+                </h1>
+<p class="text-body-lg opacity-90">
+                    Your sacred journey with pure natural honey.
+                </p>
+</div>
+</div>
+</section>
+<!-- SANSKRIT QUOTE -->
+<div class="max-w-container-max mx-auto px-gutter mt-xl">
+<div class="quote-bg p-xl rounded-xl border border-primary-fixed-dim text-center shadow-sm">
+<p class="text-headline-md text-primary mb-md serif-title italic">
+                ॐ कात्यायन्यै विद्महे <br>
+                कन्याकुमार्यै धीमहि ।<br>
+                तन्नो दुर्गा प्रचोदयात् ॥
+            </p>
+<div class="w-16 h-[2px] bg-primary-fixed-dim mx-auto mb-md"></div>
+<p class="text-body-md text-on-surface-variant italic">
+                May the Divine Mother guide us toward purity, nourishment, and strength.
+            </p>
+</div>
+</div>
+<main class="max-w-container-max mx-auto px-gutter py-xl space-y-3xl">
+<!-- RECENT ORDERS -->
+<section>
+<div class="flex items-center justify-between mb-lg">
+<h2 class="text-headline-md text-on-surface serif-title">Your Recent Orders</h2>
+<a class="text-label-md text-primary hover:underline" href="/products">Shop More</a>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-md">
+                {% for order in orders %}
+                <div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md flex flex-col sm:flex-row items-center gap-md hover:shadow-md transition-shadow">
+<img alt="{{ order.product_name }}" class="w-full sm:w-24 h-24 object-cover rounded-lg bg-surface-container" src="{{ order.image }}">
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-headline-sm text-on-surface serif-title">{{ order.product_name }}</h3>
+<p class="text-body-sm text-on-surface-variant">Order ID: #{{ order.order_id }}</p>
+</div>
+<span class="text-headline-sm font-bold text-primary">₹{{ order.price }}</span>
+</div>
+<div class="mt-md flex items-center gap-2">
+<span class="text-label-sm uppercase tracking-wider px-2 py-1 rounded bg-secondary-container text-on-secondary-container">
+                                {{ order.order_status }}
+                            </span>
+</div>
+</div>
+</div>
+                {% endfor %}
+                
+                {% if not orders %}
+                <div class="col-span-full py-xl text-center border-2 border-dashed border-outline-variant rounded-xl">
+<p class="text-body-lg text-on-surface-variant">No recent orders yet.</p>
+</div>
+                {% endif %}
+            </div>
+</section>
+<!-- COMMUNITY & FEEDBACK -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-xl items-start">
+<!-- SHARE YOUR JOURNEY (SIDEBAR FORM) -->
+<div class="lg:col-span-4">
+<div class="premium-card gold-border p-8 rounded-3xl shadow-xl sticky top-24 craft-pattern border-t-4 border-t-honey-gold">
+<div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-honey-gold/10">
+<div class="flex flex-col items-center text-center gap-3 mb-8">
+<div class="w-12 h-12 rounded-full bg-honey-gold/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-honey-gold-deep text-3xl">ink_pen</span>
+</div>
+<h2 class="text-headline-md text-deep-charcoal serif-title font-bold tracking-tight">Share Your Journey</h2>
+<p class="text-body-sm text-deep-charcoal/70 leading-relaxed max-w-xs">Your feedback helps us maintain the sacred purity of our craft and serves as guidance for seekers.</p>
+</div>
+<form action="/add_review" class="space-y-6" method="POST">
+<input name="product_id" type="hidden" value="{{ orders[0].product_id if orders else '' }}">
+<div class="space-y-2">
+<label class="text-[11px] text-honey-gold-deep font-bold uppercase tracking-[0.2em] block">Overall Rating</label>
+<div class="relative gold-border-focus rounded-xl overflow-hidden transition-all">
+<select class="w-full bg-white border-honey-gold/20 rounded-xl p-4 text-body-md focus:ring-0 focus:border-honey-gold appearance-none transition-all shadow-inner text-deep-charcoal" name="rating" required="">
+<option value="5">★★★★★ Excellent</option>
+<option value="4">★★★★ Very Good</option>
+<option value="3">★★★ Good</option>
+<option value="2">★★ Fair</option>
+<option value="1">★ Poor</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-honey-gold">expand_more</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-[11px] text-honey-gold-deep font-bold uppercase tracking-[0.2em] block">Detailed Experience</label>
+<textarea class="w-full bg-white border border-honey-gold/20 rounded-xl p-4 text-body-md focus:ring-1 focus:ring-honey-gold focus:border-honey-gold transition-all resize-none shadow-inner text-deep-charcoal" name="comment" placeholder="Describe the aroma, texture, and feeling..." required="" rows="6"></textarea>
+</div>
+<button class="w-full bg-deep-charcoal text-white py-4 px-8 rounded-xl font-bold text-label-md uppercase tracking-[0.15em] hover:bg-honey-gold-deep transition-all active:scale-[0.97] shadow-xl flex items-center justify-center gap-2" type="submit">
+                                Post Review
+                                <span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+<!-- COMMUNITY WISDOM (MAIN CONTENT) -->
+<div class="lg:col-span-8 space-y-2xl">
+<!-- REVIEWS GRID -->
+<section>
+<div class="flex items-center justify-between mb-8 border-b border-honey-gold/20 pb-6">
+<div class="flex items-center gap-4">
+<h2 class="text-headline-md text-deep-charcoal serif-title">Community Wisdom</h2>
+<span class="text-[10px] font-sans font-bold uppercase tracking-[0.2em] text-honey-gold-deep bg-honey-gold/10 px-4 py-1.5 rounded-full border border-honey-gold/20">Latest Testimonials</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {% for review in reviews %}
+                        <div class="premium-card gold-border rounded-3xl p-8 shadow-sm hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500 relative group overflow-hidden">
+<!-- Decorative accent -->
+<div class="absolute -top-4 -right-4 w-16 h-16 bg-honey-gold/5 rounded-full blur-xl group-hover:bg-honey-gold/10 transition-colors"></div>
+<div class="flex flex-col gap-4 mb-6 relative">
+<div class="flex justify-between items-center">
+<h3 class="text-label-md text-deep-charcoal font-bold serif-title tracking-wider uppercase border-b-2 border-honey-gold/20 pb-1">{{ review.customer_name }}</h3>
+<div class="flex items-center gap-0.5">
+                                        {% for i in range(review.rating) %}
+                                            <span class="material-symbols-outlined text-[16px] text-honey-gold-deep fill-1">star</span>
+                                        {% endfor %}
+                                        {% for i in range(5 - review.rating) %}
+                                            <span class="material-symbols-outlined text-[16px] text-honey-gold/20">star</span>
+                                        {% endfor %}
+                                    </div>
+</div>
+</div>
+<div class="relative min-h-[100px]">
+<span class="material-symbols-outlined absolute -left-5 -top-5 text-honey-gold/10 text-6xl pointer-events-none select-none">format_quote</span>
+<p class="text-body-md text-deep-charcoal/90 leading-relaxed italic serif-title relative z-10 pt-2">
+                                    "{{ review.comment }}"
+                                </p>
+</div>
+<div class="mt-6 pt-6 border-t border-honey-gold/5 flex justify-between items-center opacity-40">
+<div class="h-1 w-8 bg-honey-gold/30 rounded-full"></div>
+<span class="material-symbols-outlined text-honey-gold text-[14px]">psychology_alt</span>
+</div>
+</div>
+                        {% endfor %}
+                    </div>
+</section>
+<!-- YOUR CONTRIBUTIONS -->
+<section class="premium-card p-10 rounded-[2.5rem] border-2 border-honey-gold/10 relative overflow-hidden shadow-inner">
+<div class="absolute -top-20 -right-20 p-8 opacity-5">
+<span class="material-symbols-outlined text-[300px] text-honey-gold select-none">verified</span>
+</div>
+<div class="relative z-10 mb-10">
+<h2 class="text-headline-md text-deep-charcoal flex items-center gap-3 serif-title">
+                            Your Contributions
+                            <span class="material-symbols-outlined text-honey-gold-deep fill-1 text-2xl animate-pulse">favorite</span>
+</h2>
+<p class="text-body-sm text-deep-charcoal/60 serif-title mt-2 italic">A legacy of your appreciation for the divine craft.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
+                        {% for review in reviews %}
+                        <div class="bg-white/60 backdrop-blur-md border border-honey-gold/20 rounded-2xl p-6 flex flex-col justify-between hover:bg-white hover:border-honey-gold/40 transition-all shadow-sm">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-honey-gold-deep text-[20px]">workspace_premium</span>
+<h3 class="text-[11px] text-deep-charcoal font-bold uppercase tracking-[0.15em]">{{ review.product_name }}</h3>
+</div>
+<div class="flex gap-0.5">
+                                        {% for i in range(review.rating) %}
+                                            <span class="material-symbols-outlined text-[14px] text-honey-gold fill-1">star</span>
+                                        {% endfor %}
+                                    </div>
+</div>
+<p class="text-body-sm text-deep-charcoal/80 leading-relaxed italic border-l-2 border-honey-gold/20 pl-4 py-1">
+                                    {{ review.comment }}
+                                </p>
+</div>
+<div class="mt-6 pt-4 border-t border-honey-gold/10 flex items-center justify-between">
+<span class="text-[10px] text-honey-gold-deep font-bold uppercase tracking-[0.2em]">Verified Experience</span>
+<span class="material-symbols-outlined text-honey-gold text-[18px]">verified_user</span>
+</div>
+</div>
+                        {% endfor %}
+                    </div>
+</section>
+</div>
+</div>
+</main>
+<!-- FOOTER -->
+<footer class="bg-deep-charcoal mt-3xl py-xl border-t-4 border-honey-gold">
+<div class="max-w-container-max mx-auto px-gutter text-center text-warm-cream/60">
+<p class="text-body-sm font-sans uppercase tracking-[0.2em]">© 2024 Sadhana Honey. Purely Handcrafted, Spiritually Sourced.</p>
+</div>
+</footer>
+
+
+
+
+
+
+</body></html>

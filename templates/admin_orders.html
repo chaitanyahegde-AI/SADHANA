@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Admin Orders</title>
+
+    <link rel="stylesheet"
+          href="/static/style.css">
+
+</head>
+
+<body>
+
+<div class="banner">
+
+    <div class="brand">
+
+        Sadhana Honey
+
+    </div>
+
+    <nav>
+
+        <a href="/"
+           class="nav-link">
+
+           Home
+
+        </a>
+
+        <a href="/products"
+           class="nav-link">
+
+           Products
+
+        </a>
+
+        <a href="/admin/logout"
+           class="nav-link">
+
+           Logout
+
+        </a>
+
+    </nav>
+
+</div>
+
+<div class="hero small-hero">
+
+    <h1>
+
+        Order Dashboard
+
+    </h1>
+
+    <p class="tagline">
+
+        Review every order in one place
+        to manage fulfillment.
+
+    </p>
+
+</div>
+
+<div class="order-table">
+
+    {% if orders %}
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>#</th>
+
+                <th>Product</th>
+
+                <th>Name</th>
+
+                <th>Phone</th>
+
+                <th>Address</th>
+
+                <th>Status</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            {% for order in orders %}
+
+            <tr>
+
+                <td>
+                    {{ loop.index }}
+                </td>
+
+                <td>
+                    {{ order.product }}
+                </td>
+
+                <td>
+                    {{ order.name }}
+                </td>
+
+                <td>
+                    {{ order.phone }}
+                </td>
+
+                <td>
+                    {{ order.address }}
+                </td>
+
+                <td>
+                    {{ order.order_status }}
+                </td>
+
+            </tr>
+
+            {% endfor %}
+
+        </tbody>
+
+    </table>
+
+    {% else %}
+
+    <p class="empty-orders">
+
+        No orders found.
+
+    </p>
+
+    {% endif %}
+
+</div>
+
+</body>
+
+</html>

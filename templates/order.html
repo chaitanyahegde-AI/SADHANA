@@ -1,0 +1,264 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Order {{ product.name }}</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-gray-50">
+
+<!-- NAVBAR -->
+
+<header class="bg-white shadow-sm sticky top-0 z-50">
+
+    <div class="max-w-7xl mx-auto px-6 py-4
+                flex justify-between items-center">
+
+        <h1 class="text-3xl font-bold text-amber-600">
+            Sadhana Honey 🍯
+        </h1>
+
+        <nav class="flex gap-8">
+
+            <a href="/"
+               class="text-gray-700 hover:text-amber-600 font-medium">
+               Home
+            </a>
+
+            <a href="/products"
+               class="text-gray-700 hover:text-amber-600 font-medium">
+               Products
+            </a>
+
+            <a href="/cart"
+               class="text-gray-700 hover:text-amber-600 font-medium">
+               Cart
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<!-- PRODUCT SECTION -->
+
+<section class="max-w-6xl mx-auto px-6 py-14">
+
+    <div class="grid md:grid-cols-2 gap-14 items-center">
+
+        <!-- IMAGE -->
+
+        <div>
+
+            <img src="{{ product.image }}"
+                 alt="{{ product.name }}"
+                 class="w-full h-[500px] object-cover rounded-3xl shadow-xl">
+
+        </div>
+
+        <!-- DETAILS -->
+
+        <div>
+
+            <span class="bg-amber-100 text-amber-700
+                         px-4 py-2 rounded-full text-sm font-semibold">
+
+                Pure & Natural
+
+            </span>
+
+            <h1 class="text-5xl font-bold mt-6 mb-6">
+
+                {{ product.name }}
+
+            </h1>
+
+            <p class="text-gray-600 text-lg leading-8 mb-8">
+
+                {{ product.desc }}
+
+            </p>
+
+            <h2 class="text-4xl font-bold text-amber-600 mb-10">
+
+                ₹{{ product.price }}
+
+            </h2>
+
+            <!-- ORDER FORM -->
+
+            <form action="/submit_order"
+                  method="POST"
+                  class="space-y-5">
+
+                <input type="hidden"
+                       name="product_id"
+                       value="{{ product.product_id }}">
+
+                <input type="text"
+                       name="name"
+                       placeholder="Your Name"
+                       required
+                       class="w-full border border-gray-300
+                              rounded-xl p-4 focus:outline-none
+                              focus:ring-2 focus:ring-amber-400">
+
+                <input type="text"
+                       name="phone"
+                       placeholder="Phone Number"
+                       required
+                       class="w-full border border-gray-300
+                              rounded-xl p-4 focus:outline-none
+                              focus:ring-2 focus:ring-amber-400">
+
+                <textarea name="address"
+                          placeholder="Delivery Address"
+                          required
+                          class="w-full border border-gray-300
+                                 rounded-xl p-4 h-32
+                                 focus:outline-none
+                                 focus:ring-2 focus:ring-amber-400"></textarea>
+
+                <button type="submit"
+                        class="w-full bg-amber-500 hover:bg-amber-600
+                               text-white font-semibold py-4
+                               rounded-xl text-lg transition">
+
+                    Place Order
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- REVIEW FORM -->
+
+<section class="max-w-6xl mx-auto px-6 pb-20">
+
+    <h2 class="text-4xl font-bold mb-10">
+
+        Customer Reviews ❤️
+
+    </h2>
+
+    <!-- ADD REVIEW -->
+
+   <!-- REVIEW SECTION -->
+
+<section class="max-w-6xl mx-auto px-6 pb-20">
+
+    <h2 class="text-4xl font-bold mb-10">
+
+        Customer Reviews ❤️
+
+    </h2>
+
+    <!-- ADD REVIEW FORM -->
+
+    <form action="/add_review"
+          method="POST"
+          class="bg-white p-8 rounded-3xl shadow-md mb-14 space-y-5">
+
+        <!-- PRODUCT ID -->
+
+        <input type="hidden"
+               name="product_id"
+               value="{{ product.product_id }}">
+
+        <!-- RATING -->
+
+        <select name="rating"
+                required
+                class="w-full border border-gray-300
+                       rounded-xl p-4">
+
+            <option value="">Select Rating</option>
+
+            <option value="5">★★★★★</option>
+            <option value="4">★★★★</option>
+            <option value="3">★★★</option>
+            <option value="2">★★</option>
+            <option value="1">★</option>
+
+        </select>
+
+        <!-- COMMENT -->
+
+        <textarea name="comment"
+                  placeholder="Write your review..."
+                  required
+                  class="w-full border border-gray-300
+                         rounded-xl p-4 h-32"></textarea>
+
+        <!-- BUTTON -->
+
+        <button type="submit"
+                class="bg-black hover:bg-gray-800
+                       text-white px-8 py-4
+                       rounded-xl transition">
+
+            Submit Review
+
+        </button>
+
+    </form>
+
+    <!-- DISPLAY REVIEWS -->
+
+    <div class="grid md:grid-cols-2 gap-8">
+
+        {% for r in reviews %}
+
+        <div class="bg-white p-8 rounded-3xl shadow-sm">
+
+            <!-- STARS -->
+
+            <div class="text-yellow-500 text-2xl mb-4">
+
+                {% for i in range(r.rating) %}
+                    ★
+                {% endfor %}
+
+            </div>
+
+            <!-- COMMENT -->
+
+            <p class="text-gray-600 leading-7">
+
+                {{ r.comment }}
+
+            </p>
+
+            <!-- CUSTOMER NAME -->
+
+            <h3 class="mt-6 font-bold text-lg">
+
+                {{ r.name }}
+
+            </h3>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+</body>
+</html>

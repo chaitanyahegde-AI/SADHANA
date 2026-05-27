@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Received</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="banner">
+    <div class="brand">Sadhana Honey</div>
+    <nav>
+        <a href="/" class="nav-link">Home</a>
+        <a href="/products" class="nav-link">Products</a>
+        <a href="/admin" class="nav-link">Admin</a>
+    </nav>
+</div>
+
+<div class="hero small-hero">
+    <h1>Order Placed Successfully</h1>
+    <p class="tagline">Thanks, {{ order.name }}. We will contact you soon to confirm your order.</p>
+    <a href="/products" class="btn">Back to Products</a>
+</div>
+
+</body>
+</html>

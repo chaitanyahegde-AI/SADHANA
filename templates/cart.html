@@ -1,0 +1,158 @@
+<!DOCTYPE html><html lang="en" style =""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Cart</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300;400;500&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#131b2e",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#5c647a",
+                        "surface-tint": "#4d44e3",
+                        "surface-bright": "#f8f9ff",
+                        "on-error-container": "#93000a",
+                        "outline-variant": "#c7c4d8",
+                        "on-tertiary-fixed-variant": "#930013",
+                        "surface-container": "#e5eeff",
+                        "surface-dim": "#cbdbf5",
+                        "surface-variant": "#d3e4fe",
+                        "surface": "#f8f9ff",
+                        "inverse-surface": "#213145",
+                        "tertiary-fixed-dim": "#ffb3ad",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed": "#0f0069",
+                        "error-container": "#ffdad6",
+                        "primary": "#3525cd",
+                        "primary-container": "#4f46e5",
+                        "tertiary-container": "#bc1d25",
+                        "inverse-primary": "#c3c0ff",
+                        "tertiary-fixed": "#ffdad7",
+                        "outline": "#777587",
+                        "tertiary": "#960014",
+                        "secondary": "#565e74",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#e2dfff",
+                        "secondary-fixed": "#dae2fd",
+                        "background": "#f8f9ff",
+                        "on-surface-variant": "#464555",
+                        "on-surface": "#0b1c30",
+                        "secondary-container": "#dae2fd",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "error": "#ba1a1a",
+                        "surface-container-high": "#dce9ff",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-primary-fixed-variant": "#3323cc",
+                        "on-primary-container": "#dad7ff",
+                        "on-secondary-fixed-variant": "#3f465c",
+                        "on-background": "#0b1c30",
+                        "secondary-fixed-dim": "#bec6e0",
+                        "on-tertiary-fixed": "#410004",
+                        "on-primary": "#ffffff",
+                        "surface-container-highest": "#d3e4fe",
+                        "surface-container-low": "#eff4ff",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#ffd0cc"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "base": "4px",
+                        "md": "16px",
+                        "xs": "4px",
+                        "lg": "24px",
+                        "3xl": "64px",
+                        "gutter": "24px",
+                        "2xl": "48px",
+                        "sm": "8px",
+                        "xl": "32px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "sans": ["Inter", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9ff;
+            color: #0b1c30;
+        }
+    </style>
+</head>
+<body class="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+<div class="cart-container max-w-3xl mx-auto">
+<h1 class="cart-title text-3xl font-bold mb-8 text-on-surface">Your Cart</h1>
+
+        {% if products %}
+
+        <div class="space-y-6">
+            {% for product in products %}
+
+            <div class="cart-card bg-surface-container-lowest border border-outline-variant rounded-xl p-4 sm:p-6 flex flex-col sm:flex-row items-center justify-between gap-6 transition-all duration-300 hover:shadow-lg hover:border-primary-container/30">
+<div class="cart-left flex flex-col sm:flex-row items-center gap-6 flex-grow w-full">
+<img alt="{{ product.product_name or product.name }}" class="w-24 h-24 sm:w-32 sm:h-32 object-cover rounded-lg bg-surface-container" src="{{ product.image }}">
+<div class="cart-info flex-grow text-center sm:text-left">
+<h2 class="text-xl font-semibold text-on-surface mb-2">{{ product.product_name or product.name }}</h2>
+<div class="space-y-1 text-on-surface-variant text-sm">
+<p class="flex items-center justify-center sm:justify-start gap-2">
+<span class="font-medium">Quantity:</span> {{ product.qty }}
+                            </p>
+<p class="flex items-center justify-center sm:justify-start gap-2">
+<span class="font-medium">Price:</span> ₹{{ product.price }}
+                            </p>
+<p class="text-primary font-semibold text-base mt-2">
+<span class="text-on-surface-variant font-medium text-sm mr-1">Subtotal:</span> ₹{{ product.subtotal }}
+                            </p>
+</div>
+</div>
+</div>
+<a class="remove-btn group flex items-center gap-2 px-4 py-2 text-sm font-medium text-on-surface-variant hover:text-error transition-colors duration-200 rounded-lg" href="/remove_from_cart/{{ loop.index0 }}">
+<span class="material-symbols-outlined text-lg">delete</span>
+                    Remove
+                </a>
+</div>
+
+            {% endfor %}
+        </div>
+<div class="total-box mt-10 p-8 bg-surface-container-high rounded-2xl border border-outline-variant/30 flex flex-col items-center sm:items-end">
+<div class="text-2xl font-bold text-on-surface mb-6">
+                Total: <span class="text-primary ml-2">₹{{ total }}</span>
+</div>
+<a class="checkout-btn inline-flex items-center justify-center px-10 py-4 bg-primary text-on-primary font-bold text-lg shadow-xl shadow-primary/20 hover:bg-primary-container hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 w-full sm:w-auto rounded-xl" href="/checkout">
+                Proceed to Checkout
+            </a>
+</div>
+
+        {% else %}
+
+        <div class="empty-cart flex flex-col items-center justify-center py-20 px-4 text-center bg-surface-container-low rounded-3xl border-2 border-dashed border-outline-variant">
+<div class="w-24 h-24 bg-surface-container-highest rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-5xl text-on-surface-variant">shopping_cart_off</span>
+</div>
+<h2 class="text-2xl font-bold text-on-surface mb-3">Your cart is empty</h2>
+<p class="text-on-surface-variant mb-8 max-w-xs">Looks like you haven't added anything to your cart yet.</p>
+<a class="checkout-btn inline-flex items-center justify-center px-8 py-3 bg-primary text-on-primary font-semibold hover:bg-primary-container transition-all duration-300 rounded-xl" href="/products">
+                Shop Now
+            </a>
+</div>
+
+        {% endif %}
+
+    </div>
+
+
+</body></html>

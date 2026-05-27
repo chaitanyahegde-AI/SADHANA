@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login - Sadhana Honey</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#e9c349",
+                        "error": "#ba1a1a",
+                        "surface-dim": "#dcd9d9",
+                        "surface-container-high": "#eae7e7",
+                        "on-tertiary-fixed": "#1d1d03",
+                        "error-container": "#ffdad6",
+                        "surface-container-low": "#f6f3f2",
+                        "warm-cream": "#FFFDD0",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#735c00",
+                        "primary-fixed-dim": "#e9c349",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-background": "#1c1b1b",
+                        "inverse-surface": "#313030",
+                        "on-error-container": "#93000a",
+                        "primary": "#735c00",
+                        "deep-amber": "#FFBF00",
+                        "secondary": "#795900",
+                        "tertiary-fixed-dim": "#cac99f",
+                        "inverse-on-surface": "#f3f0ef",
+                        "secondary-container": "#ffbf00",
+                        "on-primary": "#ffffff",
+                        "on-surface": "#1c1b1b",
+                        "tertiary-fixed": "#e6e5b9",
+                        "surface-bright": "#fcf9f8",
+                        "honey-gold": "#D4AF37",
+                        "charcoal-ink": "#1A1A1A",
+                        "tertiary-container": "#b6b58c",
+                        "background": "#fcf9f8",
+                        "on-tertiary-fixed-variant": "#484828",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed": "#241a00",
+                        "surface-container": "#f0eded",
+                        "spiritual-saffron": "#FF9933",
+                        "on-secondary-fixed": "#261a00",
+                        "on-primary-container": "#554300",
+                        "primary-fixed": "#ffe088",
+                        "tertiary": "#60603e",
+                        "on-tertiary-container": "#474727",
+                        "on-primary-fixed-variant": "#574500",
+                        "outline": "#7f7663",
+                        "on-secondary-container": "#6d5000",
+                        "outline-variant": "#d0c5af",
+                        "on-secondary-fixed-variant": "#5c4300",
+                        "soft-clay": "#F5F5F0",
+                        "primary-container": "#d4af37",
+                        "surface-variant": "#e5e2e1",
+                        "secondary-fixed-dim": "#fbbc00",
+                        "on-surface-variant": "#4d4635",
+                        "surface": "#fcf9f8",
+                        "secondary-fixed": "#ffdfa0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px",
+                        "unit": "8px",
+                        "stack-sm": "12px",
+                        "stack-md": "24px",
+                        "section-gap": "80px"
+                    },
+                    "fontFamily": {
+                        "price-display": ["Manrope"],
+                        "display-lg": ["Playfair Display"],
+                        "sanskrit-decorative": ["Playfair Display"],
+                        "headline-sm": ["Playfair Display"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "body-md": ["DM Sans"],
+                        "label-uppercase": ["Manrope"],
+                        "headline-md": ["Playfair Display"],
+                        "body-lg": ["DM Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'DM Sans', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .sanskrit-text { font-family: 'Playfair Display', serif; }
+    </style>
+</head>
+<body class="bg-soft-clay min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-white border-b border-outline-variant sticky top-0 z-50">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-gutter h-20 flex items-center justify-between">
+<div class="flex items-center gap-8">
+<a class="flex items-center gap-2" href="/">
+<span class="material-symbols-outlined text-primary text-3xl">eco</span>
+<span class="font-headline-sm text-charcoal-ink tracking-tight">Sadhana Honey</span>
+</a>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-body-md text-on-surface-variant hover:text-primary transition-colors" href="/products">Shop</a>
+<a class="text-body-md text-on-surface-variant hover:text-primary transition-colors" href="/dashboard">dashboard</a>
+<a class="text-body-md text-on-surface-variant hover:text-primary transition-colors" href="/about">about</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-surface-container rounded-full">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="p-2 hover:bg-surface-container rounded-full">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content Area centered -->
+<main class="flex-grow flex items-center justify-center px-margin-mobile py-section-gap bg-warm-cream/30">
+<div class="login-card w-full max-w-md bg-white p-8 md:p-10 rounded-xl shadow-sm border border-outline-variant">
+<div class="text-center mb-8">
+<h2 class="text-headline-md text-charcoal-ink mb-2">Welcome Back</h2>
+<p class="sanskrit-text text-primary italic text-center text-lg mt-3">
+कात्यायनाय विद्महे कन्याकुमारी धीमहि
+</p>
+<p class="text-body-md text-on-surface-variant">Continue your journey of purity and mindfulness.</p>
+</div>
+
+            {% if error %}
+            <div class="mb-6 p-4 bg-error-container text-on-error-container rounded-lg flex items-center gap-3">
+<span class="material-symbols-outlined">error</span>
+<p class="text-body-md font-medium">{{ error }}</p>
+</div>
+            {% endif %}
+
+            <form action="/login" class="space-y-6" method="post">
+<div class="space-y-2">
+<label class="text-label-uppercase text-on-surface-variant block uppercase" for="username">Username or Email</label>
+<input class="w-full px-4 py-3 rounded-lg border border-outline focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all bg-surface-bright text-on-surface" id="username" name="username" placeholder="Username or email" required="" type="text"/>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-center">
+<label class="text-label-uppercase text-on-surface-variant block uppercase" for="password">Password</label>
+<a class="text-label-uppercase text-primary hover:underline" href="#">Forgot?</a>
+</div>
+<input class="w-full px-4 py-3 rounded-lg border border-outline focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all bg-surface-bright text-on-surface" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+</div>
+<button class="w-full py-4 px-6 bg-primary text-on-primary rounded-lg font-bold hover:bg-secondary transition-colors shadow-md flex items-center justify-center gap-2" type="submit">
+<span>Login to Sadhana</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</form>
+<div class="relative my-8 text-center">
+<hr class="border-outline-variant"/>
+<span class="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 px-4 bg-white text-on-surface-variant text-label-uppercase">OR</span>
+</div>
+<div class="space-y-4">
+<a class="w-full flex items-center justify-center gap-3 py-3 px-6 bg-white border border-outline rounded-lg hover:bg-surface-container transition-colors font-medium text-on-surface" href="/login/google">
+<img alt="Google Logo" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBepPHmJdhvo1fysW0rAbbfM5ce6RvwlC0HxYn3jMnJO-0cuehuXKWqDHNlyO4JBUzF6LpT1XZvf_Wr5sd7JX4mjDaUDYwuAoTM2I-jBduu_LmN0S9RwTFUwdvDCMrx-lja_By5CA_HkyU7bhJnyoVYsDvG4RHET2VDrJ5vubLJCK4M8iI2VMuM7zY5sCSXpvDVH6BFREjVyzYhbkP8qkTXlcpNrGYlYB2Y0h1V6WK-EejcAebPyUc9qKqCJ_Gza3kuVqNcIGYLF6s"/>
+<span>Continue with Google</span>
+</a>
+</div>
+<div class="mt-8 pt-6 border-t border-outline-variant text-center space-y-4">
+<p class="text-body-md text-on-surface-variant">
+                    Don't have an account? 
+                    <a class="text-primary font-bold hover:underline" href="/signup">Sign up for free</a>
+</p>
+<a class="inline-flex items-center gap-2 text-label-uppercase text-on-surface-variant hover:text-primary transition-colors" href="/">
+<span class="material-symbols-outlined text-sm">arrow_back</span>
+                    Back to home
+                </a>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-charcoal-ink text-white py-16 px-margin-mobile md:px-gutter">
+<div class="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-honey-gold text-3xl">eco</span>
+<span class="font-headline-sm tracking-tight text-white">Sadhana Honey</span>
+</div>
+<p class="text-body-md text-surface-dim/80 leading-relaxed italic mb-4">
+                    "From the heart of nature to your spiritual practice."
+                </p>
+</div>
+<div>
+<h4 class="text-label-uppercase mb-6 text-honey-gold">The Collection</h4>
+<ul class="space-y-4 text-body-md text-surface-dim">
+<li><a class="hover:text-honey-gold transition-colors" href="#">Wildflower Honey</a></li>
+<li><a class="hover:text-honey-gold transition-colors" href="#">Monofloral Blends</a></li>
+<li><a class="hover:text-honey-gold transition-colors" href="#">Infused Varieties</a></li>
+<li><a class="hover:text-honey-gold transition-colors" href="#">Ceremonial Sets</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-label-uppercase mb-6 text-honey-gold">Our Philosophy</h4>
+<ul class="space-y-4 text-body-md text-surface-dim">
+<li><a class="hover:text-honey-gold transition-colors" href="#">The Sadhana Path</a></li>
+<li><a class="hover:text-honey-gold transition-colors" href="#">Sourcing Purity</a></li>
+<li><a class="hover:text-honey-gold transition-colors" href="#">Sustainable Apiaries</a></li>
+<li><a class="hover:text-honey-gold transition-colors" href="#">Lab Reports</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-label-uppercase mb-6 text-honey-gold">Stay Mindful</h4>
+<p class="text-body-md text-surface-dim mb-4">Join our community for seasonal harvests and ritual guides.</p>
+<div class="flex gap-2">
+<input class="bg-white/10 border border-white/20 rounded px-4 py-2 w-full focus:outline-none focus:border-honey-gold" placeholder="Email address" type="email"/>
+<button class="bg-honey-gold text-charcoal-ink px-4 py-2 rounded font-bold">Join</button>
+</div>
+</div>
+</div>
+<div class="max-w-[1280px] mx-auto mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-label-uppercase text-surface-dim">
+<p>© 2024 Sadhana Honey Co. Crafted with Devotion.</p>
+<div class="flex gap-6">
+<a class="hover:text-white transition-colors" href="#">Privacy</a>
+<a class="hover:text-white transition-colors" href="#">Terms</a>
+<a class="hover:text-white transition-colors" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</body></html>

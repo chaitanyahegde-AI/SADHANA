@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | Sadhana Honey</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <style>
+
+        body{
+
+            font-family:'Manrope',sans-serif;
+
+            background:#fffaf5;
+
+            color:#2d1b00;
+        }
+
+        h1,h2,h3{
+
+            font-family:'Playfair Display',serif;
+        }
+
+        .hero{
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,0.45),
+                    rgba(0,0,0,0.45)
+                ),
+
+                url('https://images.unsplash.com/photo-1471193945509-9ad0617afabf?q=80&w=1600');
+
+            background-size:cover;
+
+            background-position:center;
+
+            height:90vh;
+        }
+
+        .glass{
+
+            backdrop-filter:blur(12px);
+
+            background:rgba(255,255,255,0.08);
+        }
+
+        .story-card{
+
+            transition:0.4s;
+        }
+
+        .story-card:hover{
+
+            transform:translateY(-6px);
+
+            box-shadow:
+                0 25px 60px rgba(0,0,0,0.12);
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-amber-100">
+
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+
+        <a href="/"
+           class="text-4xl font-serif text-amber-800">
+
+            Sadhana Honey
+
+        </a>
+
+        <div class="hidden md:flex gap-8 text-lg">
+
+            <a href="/products"
+               class="hover:text-amber-700 transition">
+
+               Shop
+
+            </a>
+
+            <a href="/dashboard"
+               class="hover:text-amber-700 transition">
+
+               Dashboard
+
+            </a>
+
+            <a href="/about"
+               class="text-amber-700 font-semibold">
+
+               About
+
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero flex items-center justify-center text-center text-white">
+
+    <div class="glass p-10 rounded-3xl max-w-4xl mx-6">
+
+        <h1 class="text-6xl md:text-7xl font-bold mb-6">
+
+            Our Story
+
+        </h1>
+
+        <p class="text-2xl leading-relaxed text-amber-100">
+
+            From humble farmers to building a dream
+            called <span class="font-semibold">
+            Sadhana Honey
+            </span>
+
+        </p>
+
+        <p class="italic text-xl mt-6 text-amber-200">
+
+            “कात्यायनाय विद्महे कन्याकुमारी धीमहि”
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- STORY SECTION -->
+
+<section class="py-24 px-6">
+
+    <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+
+        <!-- IMAGE -->
+
+        <div>
+
+            <img
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200"
+
+                class="rounded-3xl shadow-2xl w-full h-[650px] object-cover">
+
+        </div>
+
+        <!-- CONTENT -->
+
+        <div>
+
+            <h2 class="text-5xl font-bold mb-8 text-amber-800">
+
+                The Beginning
+
+            </h2>
+
+            <p class="text-xl leading-relaxed text-gray-700 mb-6">
+
+                Sadhana Honey was not born in luxury.
+
+                It was born in the middle of fields,
+                hard work, responsibilities, and dreams.
+
+            </p>
+
+            <p class="text-xl leading-relaxed text-gray-700 mb-6">
+
+                My father and mother were simple farmers,
+                living in a house filled with many people,
+                responsibilities, and struggles.
+
+                Every sunrise meant another day of work.
+                Every season brought uncertainty.
+
+            </p>
+
+            <p class="text-xl leading-relaxed text-gray-700 mb-6">
+
+                Yet they never gave up.
+
+                Through sweat, patience, discipline,
+                and faith, they slowly built something
+                meaningful for the family.
+
+            </p>
+
+            <p class="text-xl leading-relaxed text-gray-700">
+
+                What started as a small effort became
+                a symbol of devotion, purity, and
+                perseverance.
+
+                That dream became
+                <span class="font-bold text-amber-700">
+                    Sadhana Honey.
+                </span>
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- VALUES -->
+
+<section class="py-24 bg-amber-50">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+        <div class="text-center mb-20">
+
+            <h2 class="text-5xl font-bold text-amber-800 mb-6">
+
+                What We Believe
+
+            </h2>
+
+            <p class="text-xl text-gray-700">
+
+                More than honey. A story of dedication.
+
+            </p>
+
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-10">
+
+            <!-- CARD 1 -->
+
+            <div class="story-card bg-white p-10 rounded-3xl shadow-lg">
+
+                <div class="text-6xl mb-6">
+
+                    🌿
+
+                </div>
+
+                <h3 class="text-3xl font-bold mb-5">
+
+                    Purity
+
+                </h3>
+
+                <p class="text-lg leading-relaxed text-gray-700">
+
+                    We believe nature provides the purest
+                    nourishment when respected and protected.
+
+                </p>
+
+            </div>
+
+            <!-- CARD 2 -->
+
+            <div class="story-card bg-white p-10 rounded-3xl shadow-lg">
+
+                <div class="text-6xl mb-6">
+
+                    ❤️
+
+                </div>
+
+                <h3 class="text-3xl font-bold mb-5">
+
+                    Family
+
+                </h3>
+
+                <p class="text-lg leading-relaxed text-gray-700">
+
+                    Sadhana Honey is built on sacrifice,
+                    unity, and the strength of family values.
+
+                </p>
+
+            </div>
+
+            <!-- CARD 3 -->
+
+            <div class="story-card bg-white p-10 rounded-3xl shadow-lg">
+
+                <div class="text-6xl mb-6">
+
+                    ☀️
+
+                </div>
+
+                <h3 class="text-3xl font-bold mb-5">
+
+                    Hard Work
+
+                </h3>
+
+                <p class="text-lg leading-relaxed text-gray-700">
+
+                    Behind every bottle is years of
+                    discipline, farming, and determination.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- QUOTE -->
+
+<section class="py-28 px-6 text-center">
+
+    <div class="max-w-4xl mx-auto">
+
+        <h2 class="text-5xl font-bold text-amber-800 leading-relaxed">
+
+            “A dream built with honesty,
+            sacrifice, and devotion
+            becomes stronger than gold.”
+
+        </h2>
+
+        <p class="mt-10 text-2xl italic text-gray-600">
+
+            — Sadhana Honey Family
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="bg-[#1f1408] text-white py-20 px-6">
+
+    <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
+
+        <div>
+
+            <h2 class="text-4xl font-serif text-amber-400 mb-6">
+
+                Sadhana Honey
+
+            </h2>
+
+            <p class="text-gray-300 leading-relaxed">
+
+                Pure honey crafted with devotion,
+                discipline, and generations of hard work.
+
+            </p>
+
+        </div>
+
+        <div>
+
+            <h3 class="text-2xl font-semibold mb-6">
+
+                Quick Links
+
+            </h3>
+
+            <div class="flex flex-col gap-4 text-gray-300">
+
+                <a href="/products">Products</a>
+
+                <a href="/dashboard">Dashboard</a>
+
+                <a href="/login">Login</a>
+
+            </div>
+
+        </div>
+
+        <div>
+
+            <h3 class="text-2xl font-semibold mb-6">
+
+                Inspiration
+
+            </h3>
+
+            <p class="text-gray-300 italic leading-relaxed">
+
+                “Success built from struggle
+                becomes a blessing for generations.”
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="border-t border-white/10 mt-16 pt-8 text-center text-gray-400">
+
+        © 2026 Sadhana Honey.
+        Built with devotion.
+
+    </div>
+
+</footer>
+
+</body>
+</html>

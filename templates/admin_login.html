@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="banner">
+    <div class="brand">Sadhana Honey</div>
+    <nav>
+        <a href="/" class="nav-link">Home</a>
+        <a href="/products" class="nav-link">Products</a>
+    </nav>
+</div>
+
+<div class="login-card">
+    <h1 class="center">Admin Login</h1>
+    {% if error %}
+    <div class="alert">{{ error }}</div>
+    {% endif %}
+    <form action="/admin" method="POST" class="form">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit">Sign In</button>
+    </form>
+</div>
+
+</body>
+</html>
